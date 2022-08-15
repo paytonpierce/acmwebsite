@@ -1,11 +1,11 @@
 import './App.css';
 import { EasybaseProvider, useEasybase } from 'easybase-react';
-import Home from './Pages/HomePage/Homepage';
-import About from './Pages/About/About';
-import Links from './Pages/Links/Links';
-import ContactUs from './Pages/SignUp/SignUp';
+import Home from './Pages/HomePage/Homepage.tsx';
+import About from './Pages/About/About.tsx';
+import Links from './Pages/Links/Links.tsx';
+import ContactUs from './Pages/SignUp/SignUp.tsx';
 import React from "react";
-import OfficerPage from './Pages/OfficerPage/OfficerPage';
+import OfficerPage from './Pages/OfficerPage/OfficerPage.tsx';
 import {
   BrowserRouter as Router,
   Switch,

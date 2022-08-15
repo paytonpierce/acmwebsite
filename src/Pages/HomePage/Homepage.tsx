@@ -1,6 +1,6 @@
 import './HomePage.css';
 import Header from '../../Objects/Header/Header';
-import chapel from "../../Images/MotherSoDear.png";
+import chapel from '../../Images/MotherSoDear.png'
 import React from 'react';
 
 function Home() {
