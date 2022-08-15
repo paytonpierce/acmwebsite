@@ -1,11 +1,11 @@
 import './App.css';
 import { EasybaseProvider, useEasybase } from 'easybase-react';
-import Home from './Pages/HomePage/Homepage.tsx';
-import About from './Pages/About/About.tsx';
-import Links from './Pages/Links/Links.tsx';
-import ContactUs from './Pages/SignUp/SignUp.tsx';
+import Home from './Pages/HomePage/Homepage';
+import About from './Pages/About/About';
+import Links from './Pages/Links/Links';
+import SignUp from './Pages/SignUp/SignUp';
 import React from "react";
-import OfficerPage from './Pages/OfficerPage/OfficerPage.tsx';
+import OfficerPage from './Pages/OfficerPage/OfficerPage';
 import {
   BrowserRouter as Router,
   Routes,
@@ -16,25 +16,13 @@ function App() {
   return (
     <div>
     <Router>
-      <div>
-        <Routes> {/*was Switch */}
-        <Route path="/signup">
-            <ContactUs />
-          </Route>
-          <Route path="/officers">
-            <OfficerPage />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/links">
-            <Links />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+    <Routes>
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/officerpage" element={<OfficerPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/links" element={<Links />} />
+        <Route path="/" element={<Home />} />
         </Routes>
-      </div>
     </Router>
     </div>
   );
