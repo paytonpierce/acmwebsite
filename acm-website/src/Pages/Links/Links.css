@@ -1,0 +1,31 @@
+.main{
+    background-color: black;
+    width: 100%;
+    height:auto;
+}
+.title{
+    color: #bbbbbb;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: inherit;
+    cursor: default;
+}
+.description{
+    color: #bbbbbb;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 10%;
+    text-align: left;
+    margin-bottom: inherit;
+    cursor: default;
+}
+.link-objects{
+    margin-top: 2%;
+    width: auto;
+    margin-left: 10%;
+    text-align: left;
+    display: grid;
+    row-gap: 5%;
+    grid-template-columns: 30% 30% 30%;
+}

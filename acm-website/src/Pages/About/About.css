@@ -1,0 +1,48 @@
+.main{
+    background-color: black;
+    width: 100%;
+}
+.description{
+    margin-top: 1%;
+    margin-left: 10%;
+    display:inline-block;
+    text-align:justify;
+    width:80%;
+    font-size: 150%;
+    color:white;
+}
+.officer{
+    margin-left: 10%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: ivory;
+    text-align: center;
+}
+.officer-position{
+    color: #bbbbbb;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 1;
+    font-size: 150%;
+    margin-left: 10%;
+    width:60%;
+    height: 5%;
+    text-align: center;
+}
+.officer-name{
+    color: #bbbbbb;
+    margin-left: 10%;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 1;
+    font-size: 100%;
+    width:60%;
+    text-align: center;
+}
+.officer-outline{
+    margin:inherit;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 250px;
+    height: 250px;
+}

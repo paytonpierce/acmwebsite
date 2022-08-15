@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { EasybaseProvider, useEasybase } from 'easybase-react';
+import Home from './Pages/HomePage/Homepage';
+import About from './Pages/About/About';
+import Links from './Pages/Links/Links';
+import ContactUs from './Pages/SignUp/SignUp';
+import React from "react";
+import OfficerPage from './Pages/OfficerPage/OfficerPage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Router>
+      <div>
+        <Switch>
+        <Route path="/signup">
+            <ContactUs />
+          </Route>
+          <Route path="/officers">
+            <OfficerPage />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/links">
+            <Links />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
     </div>
   );
 }

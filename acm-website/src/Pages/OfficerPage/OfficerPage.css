@@ -1,0 +1,29 @@
+.main{
+    background-color: black;
+    width: 100%;
+}
+.officer-group{
+    text-align: center;
+}
+.officer-title{
+    color: #bbbbbb;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+    z-index: 1;
+    margin-left: 10%;
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom: inherit;
+}
+.officer-subtitle{
+    display:flex;
+    justify-content: left;
+    margin-left: 15%;
+    background-color: black;
+    color: white;
+    border-width: 0px;
+    outline: none;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 170%;
+    z-index: 1;
+}
