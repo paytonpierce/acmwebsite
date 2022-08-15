@@ -8,7 +8,7 @@ import React from "react";
 import OfficerPage from './Pages/OfficerPage/OfficerPage.tsx';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -17,7 +17,7 @@ function App() {
     <div>
     <Router>
       <div>
-        <Switch>
+        <Routes> {/*was Switch */}
         <Route path="/signup">
             <ContactUs />
           </Route>
@@ -33,7 +33,7 @@ function App() {
           <Route path="/">
             <Home />
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
     </div>
