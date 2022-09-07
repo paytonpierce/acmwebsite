@@ -12,7 +12,7 @@ function toSignUp() {
   window.location.href = "/signup";
 }
 function toOfficerPage() {
-  window.location.href = "/officerpage";
+  window.location.href = "/officers";
 }
 function toLinks() {
   window.location.href = "/links";

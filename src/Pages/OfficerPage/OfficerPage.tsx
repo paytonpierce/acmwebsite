@@ -4,6 +4,7 @@ import "./OfficerPage.css";
 import Officer from "../../Objects/Officer/Officer";
 import useFetch from "use-http";
 import { useEffect, useState } from "react";
+import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
 
 export type officerType = {
   firstName: string;
@@ -22,56 +23,62 @@ function OfficerPage() {
     {},
     []
   );
+  function handleClick(e: Event){
+    e.preventDefault()
+    console.log(currentYear)
+  }
   const years: number[] = [];
-  const officers = new Map<number, JSX.Element[]>();
+  const officers: officerType[] = [];
   data.map((value: officerType) => {
-    if (officers.get(value.year) === undefined) {
-      officers.set(value.year, []);
+    if (!years.includes(value.year)) {
       years.push(value.year);
     }
-    officers
-      .get(value.year)
-      ?.push(
-        <Officer
-          firstName={value.firstName}
-          lastName={value.lastName}
-          position={value.position}
-          image={value.image}
-        />
-      );
+    officers.push(value);
   });
   const [currentYear, setCurrentYear] = useState(2022);
-  let selectedYear = officers.get(currentYear);
-
-  const selection = (year: number) => {
-    console.log("selected: " + year);
-    setCurrentYear(year);
-    console.log("processed:" + currentYear);
-    selectedYear = officers.get(year);
-  };
-
   return (
     <div className="main">
       <Header />
       <div className="officer-group">
         <h1 className="officer-title">Officers</h1>
-        <div>
-          <select className="officer-subtitle" id="yearSelect">
-            <option
-              value={2022}
-              key={`${2022}-${2022 + 1}`}
-              onClick={() => selection(2022)}
-            >{`${2022}-${2022 + 1}`}</option>
-            <option
-              value={2021}
-              key={`${2021}-${2021 + 1}`}
-              onClick={() => selection(2021)}
-            >{`${2021}-${2021 + 1}`}</option>
-          </select>
-        </div>
-        {selectedYear}
+        <form className="officer-subtitle" onSubmit={() => handleClick}>
+          {years.map((value) => {
+            return (
+              <input
+                type="button"
+                key={`button-${value}`}
+                value={value}
+                onClick={() => setCurrentYear(value)}
+                className="year-button"
+                name={`${value}-${value+1}`}
+              />
+            );
+          })}
+        </form>
+        {officers.map((value) => {
+          if (value.year == currentYear) {
+            return (
+              <Officer
+                key={`${value.year}-${value.position}`}
+                firstName={value.firstName}
+                lastName={value.lastName}
+                position={value.position}
+                image={value.image}
+              />
+            );
+          }
+        })}
       </div>
     </div>
   );
 }
 export default OfficerPage;
+
+{
+  /*
+
+    .filter((value) =>
+      value.key?.toString().includes(currentYear.toString())
+    )
+ */
+}

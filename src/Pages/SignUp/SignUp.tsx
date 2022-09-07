@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../Objects/Header/Header";
 import "./SignUp.css";
 
-function ContactUs() {
+function SignUp() {
   return (
     <div className="main">
       <Header />
@@ -23,9 +23,9 @@ function ContactUs() {
           <label className="label">Email</label>
           <input type="text" name="Email" className="input" />
         </form>
-        <input type="submit" name="Submit" className="button" />
+        <input type="submit" name="Submit" className="button"/>
       </div>
     </div>
   );
 }
-export default ContactUs;
+export default SignUp;
